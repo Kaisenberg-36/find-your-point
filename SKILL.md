@@ -1,6 +1,6 @@
 ---
 name: find-your-point
-description: Analyze scattered work materials for work summaries, project reports, business reviews, and presentation storytelling. Find evidence-grounded insights and organize them for the intended audience in editable local HTML briefings. Use when the user needs to find the point and shape a briefing from source materials. Not for native PowerPoint/PPTX export, slide formatting alone, or generic text summarization.
+description: Analyze scattered work materials for year-end reviews, annual work summaries, project reports, business reviews, and presentation storytelling. Find evidence-grounded insights and organize them for the intended audience in editable local HTML briefings. Use when the user needs to find the point and shape a briefing from source materials. Not for native PowerPoint/PPTX export, slide formatting alone, or generic text summarization.
 ---
 
 # find-your-point · Material understanding to editable briefing
