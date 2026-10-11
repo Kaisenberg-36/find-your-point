@@ -1,178 +1,94 @@
-# find-your-point
-
-An AI agent skill for **year-end reviews, annual work summaries, business reviews, and presentation storytelling**. Find the point in scattered materials, ground it in evidence, and build an editable HTML briefing.
-
-[Install & try](#install--try) · [Year-end review guide](docs/year-end-review.md) · [Preview the example](#example-story) · [Setup](docs/USAGE.md) · [Feedback](https://github.com/Kaisenberg-36/find-your-point/issues)
+# Find-your-Point
 
 **Stop making slides. Start making your point.**
 
 ### You bring the materials. Not the answers.
 
-You shouldn't have to analyze, summarize, and organize everything yourself just to get AI to create a useful presentation.
+You did the work. You may not yet know what it adds up to—or what is worth telling your audience.
 
-**This skill does the heavy thinking first.** It guides your agent to read your materials, discover what matters, and build a clear story around what your audience needs to understand — **without making you figure out the structure first.**
-
-**Your materials → the point worth making → the evidence behind it → a briefing you can keep editing.** The agent handles the analysis and organization, asking for your input when a consequential decision needs you.
-
-### See below for examples:
-
-The briefing separates non-comparable ticket totals from the complaint-only category table.
-
-![English briefing: mixed ticket totals versus comparable complaint-category shares](docs/assets/demo-observed.png)
-
-<details>
-<summary>2. Examine the business clues separately</summary>
-
-![English briefing: logistics and product-use clues](docs/assets/demo-clues.png)
-
-Delivery records and product-use records describe different issues, with different evidence gaps.
-
-</details>
-
-<details>
-<summary>3. Bring the findings together without inventing a cause</summary>
-
-![English briefing: synthesis of the findings and remaining gaps](docs/assets/demo-synthesis.png)
-
-The synthesis keeps the valid category changes visible while preserving the unresolved count trend and attribution.
-
-</details>
-
-[Explore the synthetic inputs](examples/integrated-task-slice/source-packet.md) and [source correction](examples/integrated-task-slice/source-revision.md). To run the English demo, download the whole repository and open `examples/integrated-task-slice-en/index.html`. No build step is needed.
-
-
-*Actual output from the included synthetic example. [See the reasoning and remaining views](#example-story).*
-
-## Install & try
-
-Works with supported **Agent Skills-compatible AI agents**. Installation uses [Skills CLI](https://github.com/vercel-labs/skills), which lets you select your agent.
+Find-your-Point is an **AI agent skill for document analysis, insight discovery, and presentation storytelling**. It reads your materials, connects the evidence, proposes meaningful angles, and organizes a briefing around what your audience needs to understand. Bring the goals and context you already have; the agent asks for your input when an important direction or necessary judgment cannot be resolved from the materials.
 
 ```sh
 npx skills add Kaisenberg-36/find-your-point
 ```
 
-Then tell your agent:
+[Try it with your agent](#install--try) · [See the example](#same-materials-better-judgment-better-narrative) · [Setup](docs/USAGE.md)
 
-> Use find-your-point. Read the materials in [my folder], find what really matters, and create a clear, editable briefing for [my audience]. Don't just summarize — help me make the point. Save the result in outputs/first-briefing/.
+## Think before presenting
 
-Bring authorized files and whatever you already know about the audience. You do not need to pre-summarize them. Your agent needs file access, editing and execution tools, readers for your formats, and a way to inspect rendered HTML. [Setup and dependencies](docs/USAGE.md).
-
-### Try the included example without an AI account
-
-[Download the demo ZIP](https://github.com/Kaisenberg-36/find-your-point/archive/refs/heads/main.zip), extract it, and open `examples/integrated-task-slice-en/index.html` in your browser. Keep the extracted folder together. Viewing needs no model, API key, or build step; generating your own briefing needs a file-capable agent and the [setup requirements](docs/USAGE.md).
-
-### When to use it
-
-| Your task | What the agent helps you work out |
+| If this sounds familiar… | What Find-your-Point helps you do |
 |---|---|
-| [Year-end review / annual review](docs/year-end-review.md) | What a year's work adds up to, which contributions are supported, and what deserves attention |
-| Work summary or project update | Which changes and results matter to this audience |
-| Business review or retrospective | What the materials support, where they disagree, and what remains unknown |
-| Executive briefing or presentation narrative | A clear point and a reading path grounded in the evidence |
-| PPT / PowerPoint content planning | The message and supporting reasoning; current delivery is editable HTML, without native `.pptx` export |
+| “I did so much. How do I show what mattered?” | Find supported contributions and explain their significance, rather than turn an activity list into slides. |
+| “There is too much material. I don't know where to start.” | Discover the important relationships and shape the narrative around your audience, without asking you to prepare the answers first. |
+| “The AI sounds confident. Can I trust its conclusion?” | Trace important claims to their sources, separate facts from interpretations, and keep missing evidence visible for review. |
+| “I need to reuse this after the presentation.” | Keep editable files and the source and decision context needed to revise or hand off the work with an agent. |
 
-**中文使用场景：** 年终总结、年度工作总结、年终汇报、述职汇报、项目复盘、材料分析与 PPT 内容梳理。提供材料和受众背景，让 Agent 帮你找重点、理清依据并组织表达；当前交付可编辑 HTML，不直接导出 PowerPoint 文件。可以用中文提出任务。
+A template-first workflow asks **“Which section does this belong in?”**  
+Find-your-Point starts with **“What do these materials actually support—and why should this audience care?”**
 
-### Start with your year-end review
+## Same materials. Better judgment. Better narrative.
 
-Preparing a **year end review**, annual work summary, or year-end presentation? Bring project updates, meeting notes, feedback, and results. You do not need to turn them into an outline first.
+*An existing synthetic business-review example, not a customer result.*
 
-> Use find-your-point for my year-end review. Read the authorized materials in [folder] for [audience]. Find the contributions and changes that the evidence supports, identify the most useful point to communicate, and build an editable HTML briefing in outputs/year-end-review/. Keep uncertain impact and attribution clear.
-
-[See what to bring, a Chinese prompt, and what to expect →](docs/year-end-review.md)
-
-## You did the work. Let AI find the story.
-
-You have project updates, spreadsheets, meeting notes, and feedback. A template-first workflow might organize them into
-**Background → Progress → Achievements → Next Steps**. This skill helps you:
-
-- **Find what matters.** Discover meaningful changes, relationships, and potential value across your materials.
-- **Think beyond templates.** Shape the narrative around your audience, not predefined chapters.
-- **Keep claims grounded.** Connect important findings to sources; separate evidence from assumptions.
-- **Own the result.** Keep the HTML and editable source files, and refine them with your agent.
-
-## From Scattered Materials to a Clear Point
-**Scattered inputs → important findings → audience-first briefing**
-
-**📑 Input — Scattered Materials**
-
-Complaint records, delivery data, product feedback, and management assertions.
-
-<p align="center">↓</p>
-
-**🧠 Insight — What Actually Matters**
-
-Complaint categories shifted, but not every number is directly comparable. The evidence reveals meaningful patterns — without proving what caused them.
-
-<p align="center">↓</p>
-
-**🖥️ Output — A Briefing Built Around Understanding**
-
-A clear, editable HTML briefing that connects the findings, explains what the evidence supports, and guides your audience toward the key takeaway.
-
-**Not just organized information. A point worth making.**
-
-
-## Example story
-
-Imagine you're preparing a business review with three months of customer support reports, delivery records, and product feedback.
-
-### 📋 A typical template-first briefing
+A template-first report might follow:
 
 **Background → Complaint Trends → Root Causes → Action Plan**
 
-Everything is neatly organized.
+But did complaints actually increase?
 
-But it might miss the most important question:
+- **The totals cannot establish growth.** May counts complaints; June and July include inquiries too.
+- **A useful change is still visible.** A separate, consistently defined complaint-only table shows delivery-delay share rising from 31% to 42%, and system-use share falling from 24% to 18%. Shares do not establish category counts.
+- **The explanation remains open.** Delivery and product-use records provide different clues, without proving either a single cause or a combined explanation.
 
-**Did customer complaints actually increase?**
+The briefing now has a point: **the complaint mix changed; overall growth and its causes remain unresolved.**
 
-### 💡 With find-your-point
+That finding shapes the reading path: **Observation → Separate Clues → Supported Synthesis.**
 
-Instead of filling a predefined outline, the AI examines the evidence and discovers:
+**1. Establish what can actually be compared.**
 
-**01 · The apparent increase may be misleading.**
+![Observation: mixed ticket totals and a comparable complaint-category table](docs/assets/demo-observed.png)
 
-One month's report counts complaints. Later reports also include customer inquiries. The totals aren't directly comparable.
+<details>
+<summary>2. Examine the delivery and product-use clues separately</summary>
 
-**02 · But something meaningful did change.**
+![Separate clues: delivery and product-use evidence with their missing links](docs/assets/demo-clues.png)
 
-A separate, consistently defined complaint breakdown reveals a change in the types of issues customers reported.
+The two lines of evidence stay distinct; reading them in sequence does not turn them into a causal chain.
 
-**03 · And the causes? Still unproven.**
+</details>
 
-Delivery and product records offer clues, but the available evidence doesn't establish what's driving the change.
+<details>
+<summary>3. Bring the supported findings and unresolved questions together</summary>
 
-### 🎯 The briefing now has a point.
+![Supported synthesis: the mix shifted, while overall growth and causes remain unresolved](docs/assets/demo-synthesis.png)
 
-**What changed isn't necessarily how many customers complained — it's the mix of problems they reported. And understanding why requires more evidence.**
+The audience gets an analysis they can discuss and review, with the uncertainty attached to the conclusions it affects.
 
-Instead of another routine status report, your audience gets a clear, evidence-grounded way to understand the problem.
+</details>
 
-**Same materials. Less guesswork. A much better story.**
+[Read the synthetic materials](examples/integrated-task-slice/source-packet.md) and [counting-basis correction](examples/integrated-task-slice/source-revision.md).  
+**Open the working example:** [download the ZIP](https://github.com/Kaisenberg-36/find-your-point/archive/refs/heads/main.zip), extract it, and open `examples/integrated-task-slice-en/index.html`. Keep the folder together. Viewing needs only a browser.
 
+## Install & try
 
-## What you own
+Run the installation command above in your project and choose your agent. Use a supported Agent Skills-compatible host with file access and the [setup requirements](docs/USAGE.md). Installation has been checked for Codex, Claude Code, Cursor, and OpenCode.
 
-Open `outputs/first-briefing/index.html` and keep its **whole folder**: HTML, editable content, styles, scripts, and handoff notes. Ask your agent to revise it; evidence changes require reviewing the conclusions they support.
-**Keep working with your agent: the delivered files remain editable.**
+Then give it one small material folder:
 
-**Available:** material-first reasoning, adaptive narrative guidance, evidence records and checks, editable local HTML. 
+> Use find-your-point. Read [folder], help me find what is worth communicating to [audience], and create an editable HTML briefing in outputs/first-briefing/.
 
-**Experimental:** quality across new tasks and agents. 
+No prepared outline is needed. If the audience or goal is unclear, say what you know and let the agent help you clarify it.
 
-**Planned:** full Evidence Mode, richer editing, print/PDF, and deeper visual and motion craft. Source tracing does not independently verify source truth.
+Useful for **work summaries, year-end reviews, project retrospectives, business analysis, strategy updates, and executive briefings**. For a year end review or annual review, [start with this guide](docs/year-end-review.md).
 
-## Questions before trying
+中文：工作总结、年终汇报、述职汇报、项目复盘、材料分析与 PPT 内容梳理。[中文首次请求](docs/year-end-review.md#中文年终总结年度工作总结与述职汇报)。
 
-**Does this create PowerPoint files?** Current output is local HTML with editable source files. It can help organize a presentation's content; native `.pptx` export is not included.
+## Yours to keep working with
 
-**Do I need to summarize the materials first?** No. Start with a small authorized folder and tell the agent who the briefing is for. It reads and organizes the materials, asking when a consequential decision needs you.
+Open `outputs/first-briefing/index.html` and keep its complete folder: HTML, editable content, styles, scripts, and handoff notes with necessary source context. Ask your agent to revise the message, incorporate new evidence, or adapt it for another audience. Changed evidence means reviewing the conclusions built on it—not just updating a number.
 
-**Which agents can I use?** Installation/file placement was checked for Codex, Claude Code, Cursor and OpenCode. The host needs the [documented tools and dependencies](docs/USAGE.md); equivalent briefing quality across agents is not established.
+**Experimental Alpha:** editable local HTML and agent-assisted revision are available; quality across tasks and agents is still being explored. Full visual Evidence Mode, seamless cross-agent continuation, richer editing, print/PDF, and advanced visual craft remain in development. Native PPTX export is not included. Source tracing supports review; it does not independently verify source truth.
 
-## Feedback and contributions
-
-[Open an issue](https://github.com/Kaisenberg-36/find-your-point/issues) with your agent, intended audience, expected result, and what happened. A small synthetic example is enough; please keep private work materials out of public issues. See [contribution guidance](CONTRIBUTING.md).
+[Setup & troubleshooting](docs/USAGE.md) · [Feedback](https://github.com/Kaisenberg-36/find-your-point/issues) · [Contribute](CONTRIBUTING.md) · [MIT License](LICENSE)
 
 If the skill helps, a star would be great.
