@@ -1,8 +1,8 @@
 # find-your-point
 
-An AI agent skill for work summaries, business reviews, and presentation storytelling. Turn scattered materials into evidence-grounded, editable HTML briefings.
+An AI agent skill for **year-end reviews, annual work summaries, business reviews, and presentation storytelling**. Find the point in scattered materials, ground it in evidence, and build an editable HTML briefing.
 
-[Install & try](#install--try) · [Preview the example](#example-story) · [Setup](docs/USAGE.md) · [Feedback](https://github.com/Kaisenberg-36/find-your-point/issues)
+[Install & try](#install--try) · [Year-end review guide](docs/year-end-review.md) · [Preview the example](#example-story) · [Setup](docs/USAGE.md) · [Feedback](https://github.com/Kaisenberg-36/find-your-point/issues)
 
 **Stop making slides. Start making your point.**
 
@@ -12,7 +12,7 @@ You shouldn't have to analyze, summarize, and organize everything yourself just 
 
 **This skill does the heavy thinking first.** It guides your agent to read your materials, discover what matters, and build a clear story around what your audience needs to understand — **without making you figure out the structure first.**
 
-The agent handles the analysis and priority work organization, asking for your input when a decision genuinely needs you.
+**Your materials → the point worth making → the evidence behind it → a briefing you can keep editing.** The agent handles the analysis and organization, asking for your input when a consequential decision needs you.
 
 
 ![English briefing: mixed ticket totals versus comparable complaint-category shares](docs/assets/demo-observed.png)
@@ -41,12 +41,21 @@ Bring authorized files and whatever you already know about the audience. You do 
 
 | Your task | What the agent helps you work out |
 |---|---|
+| [Year-end review / annual review](docs/year-end-review.md) | What a year's work adds up to, which contributions are supported, and what deserves attention |
 | Work summary or project update | Which changes and results matter to this audience |
 | Business review or retrospective | What the materials support, where they disagree, and what remains unknown |
 | Executive briefing or presentation narrative | A clear point and a reading path grounded in the evidence |
 | PPT / PowerPoint content planning | The message and supporting reasoning; current delivery is editable HTML, without native `.pptx` export |
 
-**中文使用场景：** 工作总结、项目复盘、述职汇报、材料分析与 PPT 内容梳理。提供材料和受众背景，让 Agent 帮你找重点、理清依据并组织表达；当前交付可编辑 HTML，不直接导出 PowerPoint 文件。可以用中文提出任务。
+**中文使用场景：** 年终总结、年度工作总结、年终汇报、述职汇报、项目复盘、材料分析与 PPT 内容梳理。提供材料和受众背景，让 Agent 帮你找重点、理清依据并组织表达；当前交付可编辑 HTML，不直接导出 PowerPoint 文件。可以用中文提出任务。
+
+### Start with your year-end review
+
+Preparing a **year end review**, annual work summary, or year-end presentation? Bring project updates, meeting notes, feedback, and results. You do not need to turn them into an outline first.
+
+> Use find-your-point for my year-end review. Read the authorized materials in [folder] for [audience]. Find the contributions and changes that the evidence supports, identify the most useful point to communicate, and build an editable HTML briefing in outputs/year-end-review/. Keep uncertain impact and attribution clear.
+
+[See what to bring, a Chinese prompt, and what to expect →](docs/year-end-review.md)
 
 ## You did the work. Let AI find the story.
 
