@@ -14,8 +14,32 @@ You shouldn't have to analyze, summarize, and organize everything yourself just 
 
 **Your materials → the point worth making → the evidence behind it → a briefing you can keep editing.** The agent handles the analysis and organization, asking for your input when a consequential decision needs you.
 
+### See below for examples:
+
+The briefing separates non-comparable ticket totals from the complaint-only category table.
 
 ![English briefing: mixed ticket totals versus comparable complaint-category shares](docs/assets/demo-observed.png)
+
+<details>
+<summary>2. Examine the business clues separately</summary>
+
+![English briefing: logistics and product-use clues](docs/assets/demo-clues.png)
+
+Delivery records and product-use records describe different issues, with different evidence gaps.
+
+</details>
+
+<details>
+<summary>3. Bring the findings together without inventing a cause</summary>
+
+![English briefing: synthesis of the findings and remaining gaps](docs/assets/demo-synthesis.png)
+
+The synthesis keeps the valid category changes visible while preserving the unresolved count trend and attribution.
+
+</details>
+
+[Explore the synthetic inputs](examples/integrated-task-slice/source-packet.md) and [source correction](examples/integrated-task-slice/source-revision.md). To run the English demo, download the whole repository and open `examples/integrated-task-slice-en/index.html`. No build step is needed.
+
 
 *Actual output from the included synthetic example. [See the reasoning and remaining views](#example-story).*
 
@@ -127,32 +151,6 @@ Instead of another routine status report, your audience gets a clear, evidence-g
 
 **Same materials. Less guesswork. A much better story.**
 
-*See what you get below.*
-
-
-### 1. Find the comparison that actually holds
-
-The briefing separates non-comparable ticket totals from the complaint-only category table.
-
-<details>
-<summary>2. Examine the business clues separately</summary>
-
-![English briefing: logistics and product-use clues](docs/assets/demo-clues.png)
-
-Delivery records and product-use records describe different issues, with different evidence gaps.
-
-</details>
-
-<details>
-<summary>3. Bring the findings together without inventing a cause</summary>
-
-![English briefing: synthesis of the findings and remaining gaps](docs/assets/demo-synthesis.png)
-
-The synthesis keeps the valid category changes visible while preserving the unresolved count trend and attribution.
-
-</details>
-
-[Explore the synthetic inputs](examples/integrated-task-slice/source-packet.md) and [source correction](examples/integrated-task-slice/source-revision.md). To run the English demo, download the whole repository and open `examples/integrated-task-slice-en/index.html`. No build step is needed.
 
 ## What you own
 
